@@ -83,17 +83,17 @@ public class MainActivity extends AppCompatActivity {
                                 if(ph.equals(no)){
 
                                     Toast.makeText(MainActivity.this, "Phone No Exists!", Toast.LENGTH_SHORT).show();
-//                                    Intent extraIntent = new Intent(MainActivity.this, MainActivity.class);
-//                                    extraIntent.putExtra("keyNo", no);
-//                                    startActivity(extraIntent);
+                                    Intent extraIntent = new Intent(MainActivity.this, signin.class);
+                                    extraIntent.putExtra("keyNo", no);
+                                    startActivity(extraIntent);
                                 }
                             }
                             else{
 
                                 Toast.makeText(MainActivity.this, "Data does not exist", Toast.LENGTH_SHORT).show();
-//                                Intent extraIntent = new Intent(MainActivity.this, sp2_signup.class);
-//                                extraIntent.putExtra("keyNo", no);
-//                                startActivity(extraIntent);
+                                Intent extraIntent = new Intent(MainActivity.this, signup.class);
+                                extraIntent.putExtra("keyNo", no);
+                                startActivity(extraIntent);
                             }
                         }
 
