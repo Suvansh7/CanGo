@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void popupstu() {
-        EditText number;
-        number=(EditText)findViewById(R.id.editTextPhone);
+
+
         android.app.AlertDialog.Builder mBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
         View mView = getLayoutInflater().inflate(R.layout.stupop, null);
         mBuilder.setTitle("Enter Phone Number");
@@ -64,8 +64,11 @@ public class MainActivity extends AppCompatActivity {
         mBuilder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-//                no="6969";
-                no=number.getText().toString().trim();
+                no="69649";
+//                no=number.getText().toString().trim();
+//                EditText number;
+//                number=findViewById(R.id.editTextPhone);
+//                String no=number.getText().toString();
                 reference= FirebaseDatabase.getInstance().getReference("Teachers");
 
                 reference.child(no).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
