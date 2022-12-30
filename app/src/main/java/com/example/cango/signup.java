@@ -45,7 +45,7 @@ public class signup extends AppCompatActivity {
                 userMap.put("RollNo" , rollNo);
                 userMap.put("PhoneNo" , phoneNo);
 
-                root.push().setValue(userMap);
+                root.child(phoneNo).setValue(userMap);
 
 //                root.child("name").setValue(name);
 //                root.child("mentor").setValue(mentor);
