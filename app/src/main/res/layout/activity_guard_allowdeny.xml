@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8B5B9"
+    tools:context=".GuardAllowdenyActivity">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="358dp"
+        android:layout_height="447dp"
+        android:background="@drawable/textfield"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="198dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Roll No."
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="306dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/textfield2"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="179dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#17181A"
+        android:text="Submit"
+        android:textSize="20sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="268dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/atma_semibold"
+        android:text="2100681530007"
+        android:textColor="#000000"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+</androidx.constraintlayout.widget.ConstraintLayout>
