@@ -83,7 +83,7 @@ public class splash extends AppCompatActivity {
                                         if(task.getResult().exists()){
 
                                             DataSnapshot dataSnapshot= task.getResult();
-                                            String ph= String.valueOf(dataSnapshot.child("phone_no").getValue());
+                                            String ph= String.valueOf(dataSnapshot.child("PhoneNo").getValue());
                                             if(ph.equals(no)){
 //                                                    loadingDialog.dismissDialog();
                                                 Toast.makeText(splash.this, "Phone No Exists!", Toast.LENGTH_SHORT).show();
@@ -200,9 +200,9 @@ public class splash extends AppCompatActivity {
 
 
                             Toast.makeText(splash.this, "Verified", Toast.LENGTH_SHORT).show();
-//                            Intent extraIntent = new Intent(MainActivity.this, Requests.class);
+                            Intent extraIntent = new Intent(splash.this, GuardAllowdenyActivity.class);
 //                            extraIntent.putExtra("keyNo", no);
-//                            startActivity(extraIntent);
+                            startActivity(extraIntent);
                         }
                         else{
                             Toast.makeText(splash.this, "Not Matched!", Toast.LENGTH_SHORT).show();
