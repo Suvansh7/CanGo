@@ -30,8 +30,8 @@ public class studentReq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_req);
         String no = getIntent().getStringExtra("keyNo");
-        getSupportActionBar().setTitle("Student's Request");
-        a =findViewById(R.id.studentname);
+
+//        a =findViewById(R.id.studentname);
         reason = findViewById(R.id.editTextTextMultiLine);
         Submit = findViewById(R.id.button4);
 
@@ -43,7 +43,8 @@ public class studentReq extends AppCompatActivity {
                  x = snapshot.child("PhoneNo").getValue().toString();
                  y = snapshot.child("RollNo").getValue().toString();
                  z = snapshot.child("mentor").getValue().toString();
-                 a.setText(w);
+                 getSupportActionBar().setTitle(w);
+//                 a.setText(w);
              }
              @Override
              public void onCancelled(@NonNull DatabaseError error) {
