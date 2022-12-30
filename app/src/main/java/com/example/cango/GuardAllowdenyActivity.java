@@ -10,5 +10,6 @@ public class GuardAllowdenyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guard_allowdeny);
+        getSupportActionBar().hide();
     }
 }

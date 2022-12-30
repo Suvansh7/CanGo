@@ -14,6 +14,7 @@ public class Requests extends AppCompatActivity {
         setContentView(R.layout.activity_requests);
         rcv=(RecyclerView)findViewById(R.id.rclview);
         rcv.setLayoutManager(new LinearLayoutManager(this));
+        getSupportActionBar().setTitle("Requests");
 
         String arr[]={"C","C++","JAVA","PHP",".NEt","JQuery","C","C++","JAVA","PHP",".NEt","JQuery","C","C++","JAVA","PHP",".NEt","JQuery"};
         rcv.setAdapter(new myAdapter(arr));

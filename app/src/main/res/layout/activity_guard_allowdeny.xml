@@ -14,7 +14,7 @@
         android:background="@drawable/textfield"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.235" />
@@ -23,7 +23,7 @@
         android:id="@+id/textView13"
         android:layout_width="198dp"
         android:layout_height="61dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="228dp"
         android:fontFamily="@font/atma_semibold"
         android:text="Roll No."
         android:textAlignment="center"
@@ -44,10 +44,9 @@
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <EditText
         android:id="@+id/rnum"
@@ -57,7 +56,6 @@
         android:background="@drawable/textfield2"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -65,11 +63,11 @@
         android:id="@+id/textView14"
         android:layout_width="281dp"
         android:layout_height="60dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="184dp"
         android:background="@drawable/textfield2"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,14 +88,14 @@
         android:id="@+id/pnum"
         android:layout_width="268dp"
         android:layout_height="54dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="184dp"
         android:elevation="5dp"
         android:fontFamily="@font/atma_semibold"
 
         android:textColor="#000000"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
