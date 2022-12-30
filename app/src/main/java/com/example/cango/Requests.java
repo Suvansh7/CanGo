@@ -30,8 +30,6 @@ public class Requests extends AppCompatActivity {
         rcv.setLayoutManager(new LinearLayoutManager(this));
         getSupportActionBar().setTitle("Requests");
 
-        String arr[]={"C","C++","JAVA","PHP",".NEt","JQuery","C","C++","JAVA","PHP",".NEt","JQuery","C","C++","JAVA","PHP",".NEt","JQuery"};
-        rcv.setAdapter(new myAdapter(arr));
         FirebaseRecyclerOptions<Student> options =
                 new FirebaseRecyclerOptions.Builder<Student>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Permission"), Student.class)

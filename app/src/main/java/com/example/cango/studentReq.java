@@ -24,7 +24,7 @@ public class studentReq extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_req);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Student's Req");
 
 
 //

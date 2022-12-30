@@ -35,9 +35,7 @@ public class splash extends AppCompatActivity {
         stu = findViewById(R.id.button);
         stu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                popupstu();
-            }
+            public void onClick(View v) { popupstu(); }
         });
         tea = findViewById(R.id.button2);
         tea.setOnClickListener(new View.OnClickListener() {

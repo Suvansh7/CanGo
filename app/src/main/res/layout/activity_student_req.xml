@@ -8,33 +8,19 @@
     tools:context=".studentReq">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="263dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/atma_semibold"
-        android:text="Student's name"
-        android:textColor="#000000"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView8"
         android:layout_width="186dp"
         android:layout_height="70dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
         android:elevation="20dp"
         android:fontFamily="@font/atma_semibold"
         android:text="Reason :"
         android:textColor="#000000"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
