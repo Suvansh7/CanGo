@@ -47,7 +47,7 @@ public class GuardAllowdenyActivity extends AppCompatActivity {
                             if(task.getResult().exists()){
 
                                 DataSnapshot dataSnapshot= task.getResult();
-                                String ph= String.valueOf(dataSnapshot.child("phone_no").getValue());
+                                String ph= String.valueOf(dataSnapshot.child("PhoneNo").getValue());
                                 if(ph.equals(no)){
 //                                                    loadingDialog.dismissDialog();
                                     Toast.makeText(GuardAllowdenyActivity.this, "Phone No Exists!", Toast.LENGTH_SHORT).show();
