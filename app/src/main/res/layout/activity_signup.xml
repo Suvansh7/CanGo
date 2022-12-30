@@ -109,20 +109,20 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/textfield"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toEndOf="@+id/textView6" />
 
     <EditText

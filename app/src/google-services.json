@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "391365897660",
+    "project_id": "cango-284f2",
+    "storage_bucket": "cango-284f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391365897660:android:63d62857bb248a5b9e4fb9",
+        "android_client_info": {
+          "package_name": "com.example.cango"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391365897660-ccpfm4g3hdsiu02j43f45dcnv4agsmts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZNaMlw0ksu-zjLxWFeo6mmbd1b05bYog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391365897660-ccpfm4g3hdsiu02j43f45dcnv4agsmts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

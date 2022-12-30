@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/textView4"
@@ -64,7 +64,7 @@
         android:layout_height="65dp"
         android:layout_marginBottom="88dp"
         android:autoText="false"
-        android:backgroundTint="#2B46DA"
+        android:backgroundTint="#393737"
         android:text="Submit"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
