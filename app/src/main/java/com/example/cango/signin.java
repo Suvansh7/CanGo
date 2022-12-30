@@ -34,7 +34,7 @@ public class signin extends AppCompatActivity {
     private EditText num;
     DatabaseReference reference;
     private String verificationId;
-    private Button submitPwd, generateOTPBtn;
+    private Button verifyOTPBtn, generateOTPBtn;
     private static final String SHARED_PREFS = "sharedPrefs";
 
     @Override
@@ -56,11 +56,13 @@ public class signin extends AppCompatActivity {
         edtOTP = findViewById(R.id.editTextNumber2);
         num = findViewById(R.id.editTextPhone2);
         num.setText(no);
-        generateOTPBtn = findViewById(R.id.otpverify);
+        generateOTPBtn = findViewById(R.id.otpverify1);
 
-        if (generateOTPBtn.getText().toString().equals("Submit")) {
+        verifyOTPBtn = findViewById(R.id.otpverify);
 
-            generateOTPBtn.setOnClickListener(new View.OnClickListener() {
+
+
+            verifyOTPBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (TextUtils.isEmpty(edtOTP.getText().toString())) {
@@ -71,23 +73,28 @@ public class signin extends AppCompatActivity {
                     } else {
                         // if OTP field is not empty calling
                         // method to verify the OTP.
-                        verifyCode(edtOTP.getText().toString());
+//                        verifyCode(edtOTP.getText().toString());
+                        Intent extraIntent = new Intent(signin.this, studentReq.class);
+                        extraIntent.putExtra("keyNo", no);
+                        startActivity(extraIntent);
+                        finish();
                     }
                 }
             });
 
-        }
-        else{
+
+
 
             generateOTPBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
+
                     // if the text field is not empty we are calling our
                     // send OTP method for getting OTP from Firebase.
 //                loadingDialog.startLoadingDialog();
                     String phone = "+91" + no;
-                    Toast.makeText(signin.this, phone, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(signin.this, "var", Toast.LENGTH_SHORT).show();
                     Toast.makeText(signin.this, "phone", Toast.LENGTH_SHORT).show();
                     sendVerificationCode(phone);
 //                loadingDialog.dismissDialog();
@@ -95,48 +102,48 @@ public class signin extends AppCompatActivity {
                 }
 
             });
-        }
+
 
 
     }
 
 
 //
-    private void signInWithCredential(PhoneAuthCredential credential) {
-        // inside this method we are checking if
-        // the code entered is correct or not.
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // if the code is correct and the task is successful
-                            // we are sending our user to new activity.
-                            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("flag", "true");
-                            editor.apply();
+private void signInWithCredential(PhoneAuthCredential credential) {
+    // inside this method we are checking if
+    // the code entered is correct or not.
+    mAuth.signInWithCredential(credential)
+            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        // if the code is correct and the task is successful
+                        // we are sending our user to new activity.
+                        SharedPreferences sharedPreferences= getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("flag", "true");
+                        editor.apply();
 
 
-                            String no = getIntent().getStringExtra("keyNo");
-                            Intent extraIntent = new Intent(signin.this, studentReq.class);
-                            extraIntent.putExtra("keyNo", no);
-                            startActivity(extraIntent);
-                            finish();
-                        } else {
-                            // if the code is not correct then we are
-                            // displaying an error message to the user.
-                            Toast.makeText(signin.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                        }
+                        String no = getIntent().getStringExtra("keyNo");
+                        Intent extraIntent = new Intent(signin.this, studentReq.class);
+                        extraIntent.putExtra("keyNo", no);
+                        startActivity(extraIntent);
+                        finish();
+                    } else {
+                        // if the code is not correct then we are
+                        // displaying an error message to the user.
+                        Toast.makeText(signin.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
-                });
-    }
+                }
+            });
+}
 
 
     private void sendVerificationCode(String number) {
         // this method is used for getting
         // OTP on user phone number.
-        generateOTPBtn.setText("Submit");
+        generateOTPBtn.setText("Sent");
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber(number)            // Phone number to verify
@@ -206,6 +213,6 @@ public class signin extends AppCompatActivity {
 
         // after getting credential we are
         // calling sign in method.
-//        signInWithCredential(credential);
+        signInWithCredential(credential);
     }
 }

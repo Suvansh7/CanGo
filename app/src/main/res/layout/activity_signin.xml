@@ -49,17 +49,33 @@
         android:id="@+id/textView8"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="448dp"
         android:text="OTP"
         android:textColor="#FAF7F7"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/otpverify"
+        android:layout_width="263dp"
+        android:layout_height="65dp"
+        android:autoText="false"
+        android:backgroundTint="#2B46DA"
+        android:text="Submit"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863" />
+
+
+    <Button
+        android:id="@+id/otpverify1"
         android:layout_width="263dp"
         android:layout_height="65dp"
         android:autoText="false"
@@ -68,10 +84,9 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintVertical_bias="0.549" />
 
     <EditText
         android:id="@+id/editTextPhone2"
@@ -84,20 +99,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.225" />
 
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="516dp"
         android:layout_marginBottom="48dp"
         android:background="@drawable/textfield"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

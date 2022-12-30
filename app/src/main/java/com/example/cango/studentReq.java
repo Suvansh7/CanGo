@@ -26,16 +26,16 @@ public class studentReq extends AppCompatActivity {
         setContentView(R.layout.activity_student_req);
 
 
-
-        Reason = findViewById(R.id.editTextTextMultiLine);
-        Submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String reason = Reason.getText().toString();
-
-                HashMap<String , String> userMap = new HashMap<>();
-                userMap.put("name" , reason);
-            }
-        });
+//
+//        Reason = findViewById(R.id.editTextTextMultiLine);
+//        Submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String reason = Reason.getText().toString();
+//
+//                HashMap<String , String> userMap = new HashMap<>();
+//                userMap.put("name" , reason);
+//            }
+//        });
     }
 }

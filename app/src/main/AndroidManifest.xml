@@ -25,6 +25,10 @@
         <activity
             android:name=".signin"
             android:exported="false" />
+
+        <activity
+            android:name=".studentReq"
+            android:exported="false" />
         <activity
             android:name=".signup"
             android:exported="false" />
