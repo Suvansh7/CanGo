@@ -54,6 +54,9 @@ public class GuardAllowdenyActivity extends AppCompatActivity {
                                     View mView = getLayoutInflater().inflate(R.layout.teapop, null);
                                     mBuilder.setTitle("Meerut Institute Of Engineering And Technology");
         Dialog dialog = new Dialog(GuardAllowdenyActivity.this);
+
+
+
         dialog.setContentView(R.layout.teapop);
         mBuilder.setPositiveButton("GRANTED", new DialogInterface.OnClickListener() {
             @Override
