@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button gua;
     EditText number;
     DatabaseReference reference;
-    private String no;
+    private String no,tkey,gkey;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         tea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                popuptea();
+                popuptea();
             }
         });
         gua = findViewById(R.id.button3);
         gua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                popupgua();
+                popupgua();
             }
         });
     }
@@ -130,121 +130,104 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void popuptea(){
+        tea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder mydialog = new AlertDialog.Builder(MainActivity.this);
+                mydialog.setTitle("Enter Key");
 
-//    private void popupstu() {
-//
-//
-//        android.app.AlertDialog.Builder mBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
-//        View mView = getLayoutInflater().inflate(R.layout.stupop, null);
-//        mBuilder.setTitle("Enter Phone Number");
-//        Dialog dialog = new Dialog(this);
-//        dialog.setContentView(R.layout.stupop);
-//        number=findViewById(R.id.editTextPhone);
-//        mBuilder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-////                no="7060078507";
-////
-//
-//
-//                mBuilder.setView(number);
-//                String no=number.getText().toString();
-//                reference= FirebaseDatabase.getInstance().getReference("Teachers");
-//
-//                reference.child(no).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                        if(task.isSuccessful()){
-//
-//                            if(task.getResult().exists()){
-//
-//                                DataSnapshot dataSnapshot= task.getResult();
-//                                String ph= String.valueOf(dataSnapshot.child("Id").getValue());
-//                                if(ph.equals(no)){
-//
-//                                    Toast.makeText(MainActivity.this, "Phone No Exists!", Toast.LENGTH_SHORT).show();
-//                                    Intent Intent = new Intent(MainActivity.this, signin.class);
-//                                    Intent.putExtra("keyNo", no);
-//                                    startActivity(Intent);
-//                                }
-//                            }
-//                            else{
-//
-//                                Toast.makeText(MainActivity.this, "Data does not exist", Toast.LENGTH_SHORT).show();
-//                                Intent extraIntent = new Intent(MainActivity.this, signup.class);
-//                                extraIntent.putExtra("keyNo", no);
-//                                startActivity(extraIntent);
-//                            }
-//                        }
-//
-//
-//                    }
-//                });
-//
-//
-//
-////                dialogInterface.dismiss();
-//
-//            }
-//        });
-//        mBuilder.setNegativeButton("dismiss", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                number=findViewById(R.id.editTextPhone);
-//                String no=number.getText().toString();
-//                Toast.makeText(MainActivity.this, no, Toast.LENGTH_SHORT).show();
-//
-//                dialogInterface.dismiss();
-//            }
-//        });
-//        mBuilder.setView(mView);
-//        android.app.AlertDialog dialog1 = mBuilder.create();
-//        dialog1.show();
-//    }
+                final EditText Phoneinput = new EditText(MainActivity.this);
+                Phoneinput.setInputType(InputType.TYPE_CLASS_PHONE);
+                mydialog.setView(Phoneinput);
 
-//    private void popuptea() {
-//        android.app.AlertDialog.Builder mBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
-//        View mView = getLayoutInflater().inflate(R.layout.stupop, null);
-//        mBuilder.setTitle("Enter Key");
-//        Dialog dialog = new Dialog(this);
-//        dialog.setContentView(R.layout.teapop);
-//        mBuilder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                dialogInterface.dismiss();
-//            }
-//        });
-//        mBuilder.setNegativeButton("dismiss", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                dialogInterface.dismiss();
-//            }
-//        });
-//        mBuilder.setView(mView);
-//        android.app.AlertDialog dialog1 = mBuilder.create();
-//        dialog1.show();
-//    }
-//
-//    private void popupgua() {
-//        android.app.AlertDialog.Builder mBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
-//        View mView = getLayoutInflater().inflate(R.layout.stupop, null);
-//        mBuilder.setTitle("Enter Key");
-//        Dialog dialog = new Dialog(this);
-//        dialog.setContentView(R.layout.guapop);
-//        mBuilder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                dialogInterface.dismiss();
-//            }
-//        });
-//        mBuilder.setNegativeButton("dismiss", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                dialogInterface.dismiss();
-//            }
-//        });
-//        mBuilder.setView(mView);
-//        android.app.AlertDialog dialog1 = mBuilder.create();
-//        dialog1.show();
-//    }
+                mydialog.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        tkey=Phoneinput.getText().toString();     //the phone no entered by user
+//                            loadingDialog.startLoadingDialog();
+                        if(tkey.equals("1111")){
+
+
+                            Toast.makeText(MainActivity.this, "Verified", Toast.LENGTH_SHORT).show();
+                            Intent extraIntent = new Intent(MainActivity.this, Requests.class);
+                            extraIntent.putExtra("keyNo", no);
+                            startActivity(extraIntent);
+                        }
+                        else{
+                            Toast.makeText(MainActivity.this, "Not Matched!", Toast.LENGTH_SHORT).show();
+//                                loadingDialog.dismissDialog();
+                        }
+
+
+                    }
+                });
+
+                mydialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                mydialog.show();
+
+
+
+            }
+
+        });
+
+    }
+
+
+    private void popupgua(){
+        gua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder mydialog = new AlertDialog.Builder(MainActivity.this);
+                mydialog.setTitle("Enter Key");
+
+                final EditText Phoneinput = new EditText(MainActivity.this);
+                Phoneinput.setInputType(InputType.TYPE_CLASS_PHONE);
+                mydialog.setView(Phoneinput);
+
+                mydialog.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        gkey=Phoneinput.getText().toString();     //the phone no entered by user
+//                            loadingDialog.startLoadingDialog();
+                        if(gkey.equals("0000")){
+
+
+                            Toast.makeText(MainActivity.this, "Verified", Toast.LENGTH_SHORT).show();
+//                            Intent extraIntent = new Intent(MainActivity.this, Requests.class);
+//                            extraIntent.putExtra("keyNo", no);
+//                            startActivity(extraIntent);
+                        }
+                        else{
+                            Toast.makeText(MainActivity.this, "Not Matched!", Toast.LENGTH_SHORT).show();
+//                                loadingDialog.dismissDialog();
+                        }
+
+
+                    }
+                });
+
+                mydialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                mydialog.show();
+
+
+
+            }
+
+        });
+
+    }
+
+
 }
