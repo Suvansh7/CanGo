@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8B5B9"
+    android:background="#CDF3FF"
     tools:context=".signup">
 
 
@@ -55,30 +55,30 @@
         android:layout_width="233dp"
         android:layout_height="59dp"
         android:autoText="false"
-        android:backgroundTint="#17181A"
+        android:backgroundTint="#1D50BC"
         android:text="Submit"
         android:textSize="24sp"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintVertical_bias="0.346" />
 
     <Button
         android:id="@+id/otpverify1"
         android:layout_width="240dp"
         android:layout_height="65dp"
+        android:layout_marginTop="20dp"
         android:autoText="false"
-        android:backgroundTint="#17181A"
+        android:backgroundTint="#1D50BC"
         android:text="SEND OTP"
         android:textSize="24sp"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone2" />
 
     <EditText
         android:id="@+id/editTextPhone2"

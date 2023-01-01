@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgsplash"
+    android:background="@drawable/splashmain"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="337dp"
+        android:layout_height="139dp"
         android:background="@drawable/bghead1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,9 +21,9 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="196dp"
-        android:layout_height="78dp"
-        android:fontFamily="@font/average_sans"
+        android:layout_width="232dp"
+        android:layout_height="104dp"
+        android:fontFamily="@font/atma_semibold"
         android:text="CanGo"
         android:textAlignment="center"
         android:textColor="#000000"
