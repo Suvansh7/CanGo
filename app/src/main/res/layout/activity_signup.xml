@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8B5B9"
+    android:background="#CDF3FF"
     tools:context=".signup">
 
     <TextView
@@ -85,7 +85,7 @@
         android:layout_height="71dp"
         android:layout_marginTop="60dp"
         android:autoText="false"
-        android:backgroundTint="#17181A"
+        android:backgroundTint="#1D50BC"
         android:text="Submit"
         android:textSize="30sp"
         app:cornerRadius="25dp"
