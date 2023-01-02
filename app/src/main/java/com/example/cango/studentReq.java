@@ -31,8 +31,6 @@ public class studentReq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_req);
         String no = getIntent().getStringExtra("keyNo");
-
-//        a =findViewById(R.id.studentname);
         reason = findViewById(R.id.editTextTextMultiLine);
         Submit = findViewById(R.id.button4);
 
