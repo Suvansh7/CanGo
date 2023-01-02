@@ -37,6 +37,8 @@ public class myAdapter extends FirebaseRecyclerAdapter <Student,myAdapter.myview
     @Override
     protected void onBindViewHolder(@NonNull myviewholder holder, int position, @NonNull Student model) {
 
+        String no = model.getPhoneNo();
+
         holder.nt.setText(model.getName());
         holder.rt.setText(model.getReason());
         Glide.with(holder.ab.getContext()).load(model.getImageUrl()).into(holder.ab);
@@ -44,9 +46,10 @@ public class myAdapter extends FirebaseRecyclerAdapter <Student,myAdapter.myview
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "logout using google", Toast.LENGTH_SHORT).show();
-                Intent intent  = new Intent(context,allowdeny.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                Intent extraIntent  = new Intent(context,allowdeny.class);
+                extraIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                extraIntent.putExtra("keyNo", no);
+                context.startActivity(extraIntent);
             }
         });
 

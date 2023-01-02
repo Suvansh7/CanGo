@@ -2,12 +2,14 @@ package com.example.cango;
 
 public class Student {
     String Name,Reason,imageUrl;
+    String PhoneNo;
     Student(){
 
     }
-    public Student(String name, String reason,String imageUrl) {
+    public Student(String name, String reason,String imageUrl, String phoneNo) {
         Name = name;
-      Reason = reason;
+        Reason = reason;
+        PhoneNo=phoneNo;
         this.imageUrl = imageUrl;
     }
 
@@ -18,6 +20,15 @@ public class Student {
     public void setName(String name) {
         Name = name;
     }
+
+    public String getPhoneNo() {
+        return PhoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        PhoneNo = phoneNo;
+    }
+
 
     public String getReason() {
         return Reason;
