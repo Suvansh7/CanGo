@@ -34,7 +34,7 @@ public class Requests extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<Student>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Permission"), Student.class)
                         .build();
-        adapter = new myAdapter(options);
+        adapter = new myAdapter(options,getApplicationContext());
         rcv.setAdapter(adapter);
     }
     @Override

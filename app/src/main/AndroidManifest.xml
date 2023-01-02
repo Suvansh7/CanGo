@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CanGo">
         <activity
+            android:name=".Reqreason"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".GuardAllowdenyActivity"
             android:exported="false" />
         <activity
@@ -25,7 +32,6 @@
         <activity
             android:name=".signin"
             android:exported="false" />
-
         <activity
             android:name=".studentReq"
             android:exported="false" />

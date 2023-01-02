@@ -1,10 +1,14 @@
 package com.example.cango;
 
+import android.content.Context;
+import android.content.Intent;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,15 +21,17 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class myAdapter extends FirebaseRecyclerAdapter <Student,myAdapter.myviewholder> {
-
+    Context context;
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public myAdapter(@NonNull FirebaseRecyclerOptions<Student> options) {
+    public myAdapter(@NonNull FirebaseRecyclerOptions<Student> options, Context context) {
         super(options) ;
+        this.context = context;
+
     }
 
     @Override
@@ -34,6 +40,16 @@ public class myAdapter extends FirebaseRecyclerAdapter <Student,myAdapter.myview
         holder.nt.setText(model.getName());
         holder.rt.setText(model.getReason());
         Glide.with(holder.ab.getContext()).load(model.getImageUrl()).into(holder.ab);
+        holder.ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "logout using google", Toast.LENGTH_SHORT).show();
+                Intent intent  = new Intent(context,Reqreason.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @NonNull
