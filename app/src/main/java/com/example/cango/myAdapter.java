@@ -40,11 +40,11 @@ public class myAdapter extends FirebaseRecyclerAdapter <Student,myAdapter.myview
         holder.nt.setText(model.getName());
         holder.rt.setText(model.getReason());
         Glide.with(holder.ab.getContext()).load(model.getImageUrl()).into(holder.ab);
-        holder.ab.setOnClickListener(new View.OnClickListener() {
+        holder.nt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "logout using google", Toast.LENGTH_SHORT).show();
-                Intent intent  = new Intent(context,Reqreason.class);
+                Intent intent  = new Intent(context,allowdeny.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
