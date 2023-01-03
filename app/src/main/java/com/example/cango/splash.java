@@ -5,8 +5,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -21,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class splash extends AppCompatActivity {
+    BroadcastReceiver broadcastReceiver = null;
     Button stu;
     Button tea;
     Button gua;
@@ -31,6 +35,8 @@ public class splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        broadcastReceiver = new InternetReceiver();
+        Internetstatus();
         getSupportActionBar().hide();
         stu = findViewById(R.id.button);
         stu.setOnClickListener(new View.OnClickListener() {
@@ -226,6 +232,14 @@ public class splash extends AppCompatActivity {
         });
 
     }
+    public void Internetstatus(){
+        registerReceiver(broadcastReceiver,new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(broadcastReceiver);
+    }
 
 }
