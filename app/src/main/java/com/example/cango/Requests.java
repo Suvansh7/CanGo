@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class Requests extends AppCompatActivity {
     RecyclerView rcv;
     DatabaseReference database;
+    LoadingDialog loadingDialog = new LoadingDialog(Requests.this);
     myAdapter adapter;
     ArrayList<Student> list;
     @Override
